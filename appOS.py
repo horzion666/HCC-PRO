@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import random
 import matplotlib.pyplot as plt
 from sksurv.ensemble import RandomSurvivalForest
 from sksurv.util import Surv
@@ -80,9 +79,6 @@ vad = pd.DataFrame({'AFP200_1': [afp_value], 'GLR_1': [glr_value],'Vascularinvas
 X_test = vad
 
 st.title('随机生存森林预测OS网页计算器')
-import random
-random.seed(101) 
-np.random.seed(1)
 RSF=RandomSurvivalForest(max_depth=8, min_samples_leaf=8, min_samples_split=4,n_estimators=200)
 RSF.fit(X_train,y_train_)
 
