@@ -77,6 +77,7 @@ vad = pd.DataFrame({'AFP200_1': [afp_value], 'GLR_1': [glr_value],'Vascularinvas
 #X_test = pd.get_dummies(vad,drop_first=True,columns=cat_cols)
 #vad
 X_test = vad
+X_test = X_test[X_train.columns]
 
 st.title('随机生存森林预测OS网页计算器')
 RSF=RandomSurvivalForest(max_depth=8, min_samples_leaf=8, min_samples_split=4,n_estimators=200)
