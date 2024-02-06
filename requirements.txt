@@ -2,5 +2,5 @@ random
 matplotlib
 numpy
 pandas
-scikit-survival==0.19.0.post1
-streamlit==1.13.0
+scikit-survival
+streamlit
