@@ -88,11 +88,9 @@ vad = pd.DataFrame({'CEA_1': [cea_value], 'T_stage_1': [t1_value],'T_stage_2': [
 X_test = vad
 
 st.title('RSF预测右半结肠CSS网页计算器')
-import random
-random.seed(101) 
+
 import numpy as np
-np.random.seed(1)
-RSF=RandomSurvivalForest(max_depth=8, min_samples_leaf=8, min_samples_split=4,n_estimators=200)
+RSF=RandomSurvivalForest(max_depth=8, min_samples_leaf=4, min_samples_split=5,n_estimators=100)
 RSF.fit(X_train,y_train_)
 
 # 指定的时间点，假设时间单位是月
