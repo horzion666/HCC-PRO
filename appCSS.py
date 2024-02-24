@@ -51,7 +51,7 @@ t2_choice = st.sidebar.selectbox('T2', options=['No', 'Yes'], index=0, help='选
 t3_choice = st.sidebar.selectbox('T3', options=['No', 'Yes'], index=0, help='选择T3的状态')
 n1_choice = st.sidebar.selectbox('N1', options=['No', 'Yes'], index=0, help='选择N1的状态')
 n2_choice = st.sidebar.selectbox('N2', options=['No', 'Yes'], index=0, help='选择N2的状态')
-Chemotherapy_choice = st.sidebar.selectbox('Chemotherapy', options=['No', 'Yes'], index=0, help='选择化疗的状态')
+hualiao_choice = st.sidebar.selectbox('Chemotherapy', options=['No', 'Yes'], index=0, help='选择化疗的状态')
 num_choice = st.sidebar.selectbox('lymph node', options=['≥12', '<12'], index=0, help='选择淋巴结数目的状态')
 pi_choice = st.sidebar.selectbox('Perineural Invasion', options=['No', 'Yes'], index=0, help='选择PI的状态')
 size1_choice = st.sidebar.selectbox('Size＜5cm', options=['N0', 'Yes'], index=0, help='选择Size的状态')
@@ -77,12 +77,12 @@ n2_value = 0 if n2_choice == 'No' else 1
 size1_value = 0 if size1_choice == 'No' else 1
 grade1_value = 0 if grade1_choice == 'No' else 1
 grade2_value = 0 if grade2_choice == 'No' else 1
-Chemotherapy_value = 0 if Chemotherapy_choice == 'No' else 1
+hualiao_value = 0 if hualiao_choice == 'No' else 1
 age_value = 0 if age_choice == 'No' else 1
 pi_value = 0 if pi_choice == 'No' else 1
 
 
-vad = pd.DataFrame({'CEA_1': [cea_value], 'T_stage_1': [t1_value],'T_stage_2': [t2_value],'T_stage_3': [t3_value], 'size_1': [size1_value],'Grade_1': [grade1_value], 'Chemotherapy_1': [Chemotherapy_value], 'Grade_2': [grade2_value], 'PI_1': [pi_value],'N_stage_1': [n1_value], 'N_stage_2': [n2_value],'淋巴结数目_1': [num_value],'age_1': [age_value]})
+vad = pd.DataFrame({'CEA_1': [cea_value], 'T_stage_1': [t1_value],'T_stage_2': [t2_value],'T_stage_3': [t3_value], 'size_1': [size1_value],'Grade_1': [grade1_value], 'Chemotherapy_1': [hualiao_value], 'Grade_2': [grade2_value], 'PI_1': [pi_value],'N_stage_1': [n1_value], 'N_stage_2': [n2_value],'淋巴结数目_1': [num_value],'age_1': [age_value]})
 #X_test = pd.get_dummies(vad,drop_first=True,columns=cat_cols)
 #vad
 X_test = vad
