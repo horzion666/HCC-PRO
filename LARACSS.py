@@ -94,7 +94,7 @@ X_test = vad
 st.title('LARA Survival Prediction Calculator')
 
 import numpy as np
-RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_estimators=100)
+RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_estimators=100,random_state=5169)
 RSF.fit(X_train,y_train_)
 
 # 指定的时间点，假设时间单位是月
