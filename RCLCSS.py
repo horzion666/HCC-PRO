@@ -91,7 +91,7 @@ vad = pd.DataFrame({'CEA_1': [cea_value], 'T_stage_1': [t1_value],'T_stage_2': [
 vad = vad[X_train.columns]
 X_test = vad
 
-st.title('LARA Survival Prediction Calculator')
+st.title('RSF Survival Prediction Calculator')
 
 import numpy as np
 RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_estimators=100,random_state=5169)
@@ -132,9 +132,9 @@ if run_button:
 
 
     survival_probabilities_df = pd.DataFrame({
-        '3 Years CSS Probability': RSFtestresult_3,
-        '5 Years CSS Probability': RSFtestresult_5,
-        '8 Years CSS Probability': RSFtestresult_8
+        '1 Years CSS Probability': RSFtestresult_3,
+        '3 Years CSS Probability': RSFtestresult_5,
+        '5 Years CSS Probability': RSFtestresult_8
     })
     # 使用Streamlit展示DataFrame
     
