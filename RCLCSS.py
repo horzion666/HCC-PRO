@@ -98,7 +98,7 @@ RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_
 RSF.fit(X_train,y_train_)
 
 # 指定的时间点，假设时间单位是月
-va_times = [36, 60, 96]  # 对应于1年、3年、5年
+va_times = [12, 36, 60]  # 对应于1年、3年、5年
 run_button = st.button('Predict')
 
 if run_button:
