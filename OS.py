@@ -50,7 +50,7 @@ st.sidebar.header('Option')  # 添加侧边栏的大标题
 age_choice = st.sidebar.selectbox('Age<70', options=['No', 'Yes'], index=0)
 n1_choice = st.sidebar.selectbox('N1', options=['No', 'Yes'], index=0)
 n2_choice = st.sidebar.selectbox('N2', options=['No', 'Yes'], index=0)
-Number12_choice = st.sidebar.selectbox('Lym-number', options=['≥15.2', '<15.2'], index=0)
+Number12_choice = st.sidebar.selectbox('Lym-number', options=['≥12', '<12'], index=0)
 pi_choice = st.sidebar.selectbox('Perineural Invasion', options=['No', 'Yes'], index=0)
 llr_choice = st.sidebar.selectbox('LLR', options=['≤176.1', '>176.1'], index=0)
 gengzu_choice = st.sidebar.selectbox('Obstruction', options=['No', 'Yes'], index=0)
@@ -86,7 +86,7 @@ st.title('Survival Prediction Calculator')
 
 
 import numpy as np
-RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_estimators=100)
+RSF=RandomSurvivalForest(max_depth=5, min_samples_leaf=4, min_samples_split=9,n_estimators=100)
 RSF.fit(X_train,y_train_)
 
 
