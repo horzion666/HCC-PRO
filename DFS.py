@@ -92,7 +92,7 @@ st.title('Survival Prediction Calculator')
 
 
 import numpy as np
-RSF=RandomSurvivalForest(max_depth=7, min_samples_leaf=5, min_samples_split=9,n_estimators=100)
+RSF=RandomSurvivalForest(max_depth=6, min_samples_leaf=3, min_samples_split=3,n_estimators=100)
 RSF.fit(X_train,y_train_)
 
 
